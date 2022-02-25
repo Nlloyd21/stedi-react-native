@@ -1,5 +1,6 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput } from "react-native";
+import {View, Text} from 'react-native'; 
 
 const Login = () => {
   const [text, onChangeText] = React.useState("Phone Number");
