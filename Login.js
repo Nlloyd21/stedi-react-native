@@ -1,8 +1,8 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput } from "react-native";
-import {View, Text} from 'react-native'; 
+import { View, Text, Button } from 'react-native'
 
-const Login = () => {
+/*const Login = () => {
   const [text, onChangeText] = React.useState("Phone Number");
   const [number, onChangeNumber] = React.useState(null);
 
@@ -31,6 +31,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
-});
-
-export default Login;
+})
+*/
+export default function Login(props){
+  return(
+    <View>
+      <Text>Login Screen</Text>
+      <Button title="Log In" onPress={console.log("Logged In")}></Button>
+    </View>
+  );
+}
