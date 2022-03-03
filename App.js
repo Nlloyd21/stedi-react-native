@@ -55,6 +55,7 @@ export default function App() {
             ),
           }}
         />
+        {/* 
         <Tab.Screen
           name='Login'
           component={Login}
@@ -64,7 +65,7 @@ export default function App() {
               <MaterialCommunityIcons name='Login' color={color} size={26} />
             ),
           }}
-          />
+          /> */}
       </Tab.Navigator>
     </NavigationContainer>
   );
