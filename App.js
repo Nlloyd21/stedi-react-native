@@ -10,12 +10,14 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Login from './Login.js'
 
+
 // import Icons from "./Icons";
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
 
   const [userLoggedIn, setUserLoggedIn] =useState(false);
+  const [userEmail, setUserEmail] =useState("");
 
   if(userLoggedIn){
   return (
@@ -27,7 +29,8 @@ export default function App() {
       >
         <Tab.Screen
           name='Home'
-          children={()=><Home setUserEmail={setUserEmail} />}
+          // children={()=><Home userEmail={userEmail} />}
+          // component={Home}
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({ color }) => (
@@ -71,7 +74,7 @@ export default function App() {
   );
 }
 else {
-  return (<Login setUserLoggedIn={setUserLoggedIn} />);
+  return (<Login setUserLoggedIn={setUserLoggedIn} setUserEmail={setUserEmail}/>);
 }
 }
 
