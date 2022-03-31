@@ -6,8 +6,8 @@ import Setting from "./Setting";
 function Bar(props) {
     return(
         <View style={styles.bar}>
-            <AppName name={props.userEmail}/>
-            <Setting />  
+            {/* <AppName name={props.userEmail}/>
+            <Setting />   */}
         </View>
     )
   }

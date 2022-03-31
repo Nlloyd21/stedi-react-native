@@ -35,18 +35,21 @@ const [oneTimePassword, setOneTimePassword] = useState("");
         keyboardType="numeric"
       />
 
-      <Button title="Verify OTP" onPress={(async)=>{
-        await fetch("https://dev.stedi.me"+phoneNumber,{
+      <Button title="Verify OTP" onPress={()=>{
+         fetch("https://dev.stedi.me"+phoneNumber,{
         method: 'POST',
         headers:{
           Accept:"application/text",
           "Content-Type":"application/text"
         },
-        body:{
+        body:JSON.stringify({
           phoneNumber:phoneNumber,
           oneTimePassword:oneTimePassword
-        }});
-      }}></Button>
+        })
+      })
+      return props.setUserLoggedIn(true);
+    }}>
+      </Button>
     </View>
   );
 }
