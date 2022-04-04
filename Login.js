@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 import { View, Text, Button } from "react-native";
 
 export default function Login(props){
+
 const [phoneNumber, setPhoneNumber] = useState("");
 const [oneTimePassword, setOneTimePassword] = useState("");
   return (
